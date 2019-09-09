@@ -14,6 +14,7 @@ body,
 	height: 100%;
 	width: 100%;
 	background-color: rgb(6, 73, 145);
+	color: #fff;
 }
 #root {
 	display: flex;
@@ -46,7 +47,6 @@ body,
 	text-align: center;
 	font-family: "Bangers", cursive;
 	font-size: 32px;
-	color: #fff;
 	letter-spacing: 0.1em;
 }
 #break-length,
@@ -64,7 +64,7 @@ body,
 }
 .arrows {
 	flex-direction: column;
-	color: #fff;
+
 	font-size: 22px;
 	font-weight: bold;
 }
@@ -73,6 +73,6 @@ body,
 	font-family: "Bangers", cursive;
 	align-self: center;
 	font-size: 32px;
-	color: #fff;
+
 	width: 12%;
 }

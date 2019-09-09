@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "../style/style.css";
 import Lengthcontrol from "./Lengthcontrol";
+import Timer from "./Timer";
 
 class App extends React.Component {
 	render() {
@@ -12,6 +13,7 @@ class App extends React.Component {
 					<Lengthcontrol type="break" />
 					<Lengthcontrol type="session" />
 				</div>
+				<Timer timeLeft="25:00" />
 			</div>
 		);
 	}

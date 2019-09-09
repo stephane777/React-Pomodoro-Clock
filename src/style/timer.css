@@ -1,0 +1,19 @@
+#time-left {
+	font-family: "digital-7", sans-serif;
+	font-size: 80px;
+}
+#timer-label {
+	font-family: "Bangers", cursive;
+	text-align: center;
+	font-size: 24px;
+	letter-spacing: 0.1em;
+}
+.timer-container {
+	display: flex;
+	justify-content: center;
+}
+.timer-frame {
+	border: 8px solid rgb(85, 140, 194);
+	border-radius: 50px;
+	padding: 24px;
+}

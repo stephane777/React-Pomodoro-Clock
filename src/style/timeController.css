@@ -1,0 +1,13 @@
+.time-controller button {
+	outline: none;
+	border: none;
+	background: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 24px;
+}
+.time-controller {
+	display: flex;
+	justify-content: center;
+	padding: 24px 0;
+}

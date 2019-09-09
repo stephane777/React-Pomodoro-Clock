@@ -1,5 +1,5 @@
 import React from "react";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import "../style/lengthcontrol.css";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 const Lengthcontrol = props => {

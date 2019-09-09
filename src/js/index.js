@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import "../style/style.css";
 import Lengthcontrol from "./Lengthcontrol";
 import Timer from "./Timer";
+import TimeController from "./TimeController";
+import Footer from "./Footer";
 
 class App extends React.Component {
 	render() {
@@ -14,6 +16,8 @@ class App extends React.Component {
 					<Lengthcontrol type="session" />
 				</div>
 				<Timer timeLeft="25:00" />
+				<TimeController />
+				<Footer />
 			</div>
 		);
 	}

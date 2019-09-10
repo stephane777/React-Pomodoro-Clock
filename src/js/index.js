@@ -48,6 +48,7 @@ class App extends React.Component {
 		}
 	}
 	render() {
+		console.log("toto");
 		return (
 			<div id="main-container">
 				<h3 id="title">Pomodoro Clock</h3>

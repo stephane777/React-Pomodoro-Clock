@@ -8,11 +8,17 @@ const Lengthcontrol = props => {
 		<div className="lengthcontrol">
 			<div id={`${type}-label`}>{type} length</div>
 			<div className="length-container">
-				<div id={`${type}-length`}>5</div>
+				<div id={`${type}-length`}>{props.lengthValue}</div>
 				<div id="arrow-container">
 					<div className="flex-container arrows">
-						<FaAngleUp id={`${type}-increment`} />
-						<FaAngleDown id={`${type}-decrement`} />
+						<FaAngleUp
+							id={`${type}-increment`}
+							onClick={() => props.lengthChange(type, "+")}
+						/>
+						<FaAngleDown
+							id={`${type}-decrement`}
+							onClick={() => props.lengthChange(type, "-")}
+						/>
 					</div>
 				</div>
 			</div>

@@ -1,5 +1,5 @@
 #time-left {
-	font-family: "digital-7", sans-serif;
+	font-family: "digital-7", cursive;
 	font-size: 80px;
 }
 #timer-label {
@@ -16,4 +16,6 @@
 	border: 8px solid rgb(85, 140, 194);
 	border-radius: 50px;
 	padding: 24px;
+	width: 180px;
+	text-align: center;
 }

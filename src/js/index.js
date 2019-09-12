@@ -5,6 +5,7 @@ import Lengthcontrol from "./Lengthcontrol";
 import Timer from "./Timer";
 import TimeController from "./TimeController";
 import Footer from "./Footer";
+import Lengthcontroller from "./Lengthcontroller";
 
 class App extends React.Component {
 	constructor(props) {
@@ -52,19 +53,8 @@ class App extends React.Component {
 			<div id="main-container">
 				<h3 id="title">Pomodoro Clock</h3>
 				<div className="flex-container">
-					<Lengthcontrol
-						type="break"
-						lengthValue={this.state.break_length}
-						lengthChange={(type, operator) =>
-							this.handleTypeLength(type, operator)
-						}
-					/>
-					<Lengthcontrol
-						type="session"
-						lengthValue={this.state.session_length}
-						lengthChange={(type, operator) =>
-							this.handleTypeLength(type, operator)
-						}
+					<Lengthcontroller
+						state_length={[this.state.break_length, this.state.session_length]}
 					/>
 				</div>
 				<Timer timeLeft={this.state.time_left} />

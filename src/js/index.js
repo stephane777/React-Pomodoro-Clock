@@ -55,6 +55,9 @@ class App extends React.Component {
 				<div className="flex-container">
 					<Lengthcontroller
 						state_length={[this.state.break_length, this.state.session_length]}
+						handleTypeLength={(type, operator) =>
+							this.handleTypeLength(type, operator)
+						}
 					/>
 				</div>
 				<Timer timeLeft={this.state.time_left} />

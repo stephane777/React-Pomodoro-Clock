@@ -14,20 +14,6 @@ const Lengthcontroller = props => {
 					}
 				/>
 			))}
-			{/* <Lengthcontrol
-						type="break"
-						lengthValue={this.state.break_length}
-						lengthChange={(type, operator) =>
-							this.handleTypeLength(type, operator)
-						}
-					/>
-					<Lengthcontrol
-						type="session"
-						lengthValue={this.state.session_length}
-						lengthChange={(type, operator) =>
-							this.handleTypeLength(type, operator)
-						}
-					/> */}
 		</React.Fragment>
 	);
 };

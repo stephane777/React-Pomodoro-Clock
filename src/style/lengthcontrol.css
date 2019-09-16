@@ -27,7 +27,11 @@
 }
 #break-length,
 #session-length {
-	font-family: "Bangers", cursive;
+	/* font-family: "Bangers", cursive; */
+
+	font-family: digital-7, cursive;
+	font-weight: bold;
+	letter-spacing: 0.1em;
 	align-self: center;
 	font-size: 32px;
 	width: 40px;

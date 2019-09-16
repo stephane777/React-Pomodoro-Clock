@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "../style/style.css";
-import Lengthcontrol from "./Lengthcontrol";
+
 import Timer from "./Timer";
 import TimeController from "./TimeController";
 import Footer from "./Footer";

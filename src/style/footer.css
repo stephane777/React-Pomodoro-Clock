@@ -3,7 +3,7 @@
 	width: 100%;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 12px;
-	color: cyan;
+	color: #f75310;
 	padding-top: 10px;
 	/* margin: 0 auto; */
 }
@@ -13,7 +13,7 @@
 }
 #footer a {
 	text-decoration: none;
-	color: cyan;
+	color: #f75310;
 }
 #footer a:hover {
 	color: #fff;

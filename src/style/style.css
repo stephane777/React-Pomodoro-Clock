@@ -22,10 +22,10 @@ body,
 }
 #main-container {
 	width: 550px;
-	height: 400px;
+	/* height: 400px; */
 	align-self: center;
 }
-#title {
+/* #title {
 	font-family: "Bangers", cursive;
 	font-size: 44px;
 	text-align: center;
@@ -33,6 +33,11 @@ body,
 	color: rgb(255, 255, 255);
 	padding-bottom: 36px;
 	letter-spacing: 0.1em;
+} */
+#title {
+	display: flex;
+	justify-content: center;
+	padding: 28px 0;
 }
 .flex-container {
 	display: flex;
@@ -40,4 +45,7 @@ body,
 }
 .lengthcontrol {
 	width: 50%;
+}
+#bttf {
+	height: 125px;
 }

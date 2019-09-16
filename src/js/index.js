@@ -6,6 +6,7 @@ import Timer from "./Timer";
 import TimeController from "./TimeController";
 import Footer from "./Footer";
 import Lengthcontroller from "./Lengthcontroller";
+import "../audio/back-to-the-future-twinkle.mp3";
 
 class App extends React.Component {
 	constructor(props) {
@@ -23,16 +24,20 @@ class App extends React.Component {
 		this.toggleIsTimerRunning = this.toggleIsTimerRunning.bind(this);
 		this.formatAndUpdateTimeLeft = this.formatAndUpdateTimeLeft.bind(this);
 		this.formatDigit = this.formatDigit.bind(this);
-		this.resetTimet = this.resetTimer.bind(this);
+		this.resetTimer = this.resetTimer.bind(this);
 	}
 	resetTimer() {
+		const audio = document.getElementById("beep");
 		this.setState({
+			type: "Session",
 			break_length: 5,
 			session_length: 25,
 			time_left: "25:00",
 			isTimerRunning: false
 		});
 		clearInterval(this.state.idSetIntervall);
+		audio.pause();
+		audio.currentTime = 0;
 	}
 	toggleIsTimerRunning() {
 		this.setState({
@@ -55,16 +60,17 @@ class App extends React.Component {
 			});
 		} else if (second === "00" && minute === "00") {
 			this.setState(state => {
-				const break_formatted = this.formatDigit(state.break_length - 1);
-				const session_formatted = this.formatDigit(state.session_length - 1);
+				const break_formatted = this.formatDigit(state.break_length);
+				const session_formatted = this.formatDigit(state.session_length);
 				return {
 					type: state.type === "Session" ? "Break" : "Session",
 					time_left:
 						state.type === "Session"
-							? `${break_formatted}:59`
-							: `${session_formatted}:59`
+							? `${break_formatted}:00`
+							: `${session_formatted}:00`
 				};
 			});
+			document.getElementById("beep").play();
 		} else {
 			second = this.formatDigit(second - 1);
 			this.setState({
@@ -120,7 +126,7 @@ class App extends React.Component {
 				session_length = this.formatDigit(session_length);
 				return {
 					session_length: eval(`${state.session_length}${operator}1`),
-					time_left: "" + session_length + ":00"
+					time_left: `${session_length}:00`
 				};
 			});
 		}
@@ -130,7 +136,16 @@ class App extends React.Component {
 		const session_length = this.state.session_length;
 		return (
 			<div id="main-container">
-				<h3 id="title">Pomodoro Clock</h3>
+				{/* <h3 id="title">Pomodoro Clock</h3> */}
+				<div id="title">
+					<img
+						id="bttf"
+						src="https://fontmeme.com/permalink/190916/05c2954a801aec76b88b17fca4aef2d3.png"
+						alt="back-to-the-future-font"
+						border="0"
+					/>
+				</div>
+
 				<div className="flex-container">
 					<Lengthcontroller
 						state_length={[break_length, session_length]}
@@ -144,6 +159,10 @@ class App extends React.Component {
 					startNStop={() => this.handleStartStop()}
 					reset={() => this.resetTimer()}
 				/>
+				<audio id="beep">
+					<source src="back-to-the-future-twinkle.mp3" type="audio/mpeg" />
+					<p>Your browser doesn't support HTML5 audio. </p>
+				</audio>
 				<Footer />
 			</div>
 		);

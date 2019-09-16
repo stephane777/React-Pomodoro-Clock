@@ -4,6 +4,7 @@
 	font-family: "Bangers", cursive;
 	font-size: 32px;
 	letter-spacing: 0.1em;
+	/* color: #f75310; */
 }
 #break-length,
 #session-length {
@@ -30,10 +31,21 @@
 	align-self: center;
 	font-size: 32px;
 	width: 40px;
+	text-align: right;
+	padding-right: 18px;
 }
 #session-increment,
 #session-decrement,
 #break-increment,
 #break-decrement {
 	cursor: pointer;
+	display: flex;
+}
+#session-increment,
+#break-increment {
+	align-self: flex-end;
+}
+#session-decrement,
+#break-decrement {
+	align-self: flex-start;
 }

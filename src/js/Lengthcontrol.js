@@ -11,14 +11,18 @@ const Lengthcontrol = props => {
 				<div id={`${type}-length`}>{props.lengthValue}</div>
 				<div id="arrow-container">
 					<div className="flex-container arrows">
-						<FaAngleUp
+						<div
 							id={`${type}-increment`}
 							onClick={() => props.lengthChange(type, "+")}
-						/>
-						<FaAngleDown
+						>
+							<FaAngleUp />
+						</div>
+						<div
 							id={`${type}-decrement`}
 							onClick={() => props.lengthChange(type, "-")}
-						/>
+						>
+							<FaAngleDown />
+						</div>
 					</div>
 				</div>
 			</div>

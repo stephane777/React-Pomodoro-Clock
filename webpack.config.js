@@ -26,6 +26,13 @@ module.exports = {
 				options: {
 					name: "./src/fonts/[name].[ext]"
 				}
+			},
+			{
+				test: /\.mp3$/,
+				loader: "file-loader",
+				options: {
+					name: "[name].[ext]"
+				}
 			}
 		]
 	},

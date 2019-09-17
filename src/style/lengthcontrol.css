@@ -10,7 +10,7 @@
 #session-length {
 	display: inline-block;
 }
-#arrow-container {
+.arrow-container {
 	display: inline-block;
 }
 .length-container {
@@ -45,6 +45,9 @@
 	cursor: pointer;
 	display: flex;
 }
+.hover:hover {
+	color: #f00;
+}
 #session-increment,
 #break-increment {
 	align-self: flex-end;
@@ -52,4 +55,17 @@
 #session-decrement,
 #break-decrement {
 	align-self: flex-start;
+}
+
+@media screen and (max-width: 550px) {
+	#break-label,
+	#session-label {
+		font-size: 24px;
+	}
+}
+@media screen and (max-width: 460px) {
+	#break-label,
+	#session-label {
+		font-size: 14px;
+	}
 }

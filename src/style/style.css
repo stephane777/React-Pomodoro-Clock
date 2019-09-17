@@ -49,3 +49,11 @@ body,
 #bttf {
 	height: 125px;
 }
+@media screen and (max-width: 460px) {
+	#title {
+		padding: 14px 0;
+	}
+	#bttf {
+		height: 80px;
+	}
+}

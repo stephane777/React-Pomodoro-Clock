@@ -9,9 +9,6 @@ const Timer = props => {
 	const style = isLessThanOneMinute ? { color: "red" } : { color: "#34c015" };
 	let styleColon;
 
-	// 	? { backgroundColor: "rgb(174, 6, 6)" }
-	// 	: { backgroundColor: "rgb(23, 84, 40)" };
-
 	if (isLessThanOneMinute && secondeIsOdd) {
 		styleColon = {
 			backgroundColor: "rgb(255, 0, 0)",
@@ -41,15 +38,29 @@ const Timer = props => {
 				<div id="time-left">{props.timeLeft}</div>
 
 				<div id="time-left-container">
-					<div id="minute-container">
-						<div id="minute">{minute}</div>
+					<div id="min-label-wrapper">
+						<div id="min-label">MIN</div>
 					</div>
+					<div id="blank-div"></div>
+					<div id="sec-label-wrapper">
+						<div id="sec-label">SEC</div>
+					</div>
+
+					<div id="minute-wrapper">
+						<div id="minute-container">
+							<div id="minute">{minute}</div>
+						</div>
+					</div>
+
 					<div id="colon">
 						<div id="up-colon" style={styleColon}></div>
 						<div id="down-colon" style={styleColon}></div>
 					</div>
-					<div id="seconde-container">
-						<div id="seconde">{seconde}</div>
+
+					<div id="seconde-wrapper">
+						<div id="seconde-container">
+							<div id="seconde">{seconde}</div>
+						</div>
 					</div>
 				</div>
 			</div>

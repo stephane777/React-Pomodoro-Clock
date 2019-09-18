@@ -17,20 +17,18 @@
 	justify-content: center;
 }
 .timer-frame {
-	/* border: 8px solid rgb(85, 140, 194); */
-	/* border-radius: 50px; */
 	padding: 12px;
-	/* width: 180px; */
 	text-align: center;
 }
 #time-left-container {
 	display: flex;
 	justify-content: center;
 	width: 380px;
-	height: 175px;
+	height: 160px;
 	background-image: url("https://live.staticflickr.com/65535/48745636917_249c315d52.jpg");
 	flex-wrap: wrap;
 	border: 4px solid gray;
+	align-content: center;
 }
 #minute-container,
 #seconde-container {
@@ -49,11 +47,9 @@
 #minute,
 #seconde {
 	align-self: center;
-	/* color: #34c015; */
 }
 #colon {
 	width: 10%;
-	/* height: 150px; */
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -62,27 +58,21 @@
 #down-colon {
 	height: 14px;
 	width: 14px;
-
 	margin: 12px 0;
 	align-self: center;
 	border-radius: 50%;
 }
-/* #min-label,
-#sec-label {
 
-	width: 50%;
-} */
 #minute-wrapper,
 #seconde-wrapper {
 	width: 45%;
-	/* height: 150px; */
 	display: flex;
 	justify-content: center;
 }
 #min-label-wrapper,
 #sec-label-wrapper {
 	display: flex;
-	align-items: flex-end;
+	padding-bottom: 6px;
 	justify-content: center;
 	width: 45%;
 }
@@ -103,6 +93,23 @@
 		font-size: 16px;
 	}
 	#time-left-container {
-		width: 280px;
+		width: 220px;
+		height: 130px;
+	}
+	#minute-container,
+	#seconde-container {
+		height: 55px;
+		width: 75px;
+		font-size: 45px;
+	}
+	#min-label-wrapper,
+	#sec-label-wrapper {
+		padding-bottom: 6px;
+	}
+	#up-colon,
+	#down-colon {
+		width: 9px;
+		height: 9px;
+		margin: 9px;
 	}
 }
